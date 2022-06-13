@@ -1,0 +1,112 @@
+$bg-image: url("../../assests/page1/background2.png");
+
+.landing-page-container {
+  height: 100vh;
+  background-image: $bg-image;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.navbar-item {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: lowercase;
+  color: rgba(255, 255, 255, 0.88);
+
+  margin: 0 20px;
+  text-decoration: none;
+}
+
+.navbar-button {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: -0.01em;
+
+  background-color: transparent;
+  color: #fff9f8;
+  padding: 15px;
+  border: 1px solid white;
+}
+
+.main-title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 62px;
+  line-height: 78px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+}
+
+.main-subtitle {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.88;
+}
+
+.section-2-container {
+  height: 100vh;
+  max-height: 100vh;
+}
+
+.section-2-text-container {
+  padding: 20vh 0 10vh 0;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.section-2-title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 58px;
+  text-align: center;
+  letter-spacing: -0.01em;
+
+  color: #1e2a39;
+}
+
+.section-2-desc {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  /* or 175% */
+
+  text-align: center;
+
+  color: #5c6272;
+}
+
+.section-2-icon-items-container {
+  display: flex;
+  justify-content: center;
+
+  & > div {
+    margin: 0 5%;
+  }
+}

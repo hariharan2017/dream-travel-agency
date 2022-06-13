@@ -1,0 +1,31 @@
+.icon-card-container {
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+.icon-div {
+  margin-bottom: 7vh;
+}
+
+.icon-card-title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height */
+
+  letter-spacing: -0.02em;
+  color: #1e2a39;
+}
+
+.icon-card-desc {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  /* or 162% */
+
+  color: #5c6272;
+}
