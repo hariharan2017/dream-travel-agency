@@ -255,3 +255,54 @@ $bg-image: url("../../assests/page1/background2.png");
     margin: 2% 4%;
   }
 }
+
+/////////////////////////////////////////////////////////
+.section-6-container {
+  height: 100vh;
+}
+
+.cities-container {
+  display: flex;
+  justify-content: center;
+
+  & > div {
+    margin: 0 3%;
+  }
+}
+
+.section-6-subheading {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+
+  letter-spacing: 0.17em;
+
+  color: #4141a5;
+}
+
+.section-6-heading {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  /* identical to box height, or 130% */
+
+  letter-spacing: -0.5px;
+
+  color: #292929;
+}
+
+.section-6-text {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  /* or 175% */
+
+  color: #5c6272;
+}

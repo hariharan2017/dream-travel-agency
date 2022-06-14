@@ -1,7 +1,9 @@
 import "./Home.scss";
-import IconCard from "../IconCard";
 
 import Logo from "../../assests/page1/Logo.png";
+
+import LeftArrow from "../../assests/page3/LeftArrow.png";
+import RightArrow from "../../assests/page3/RightArrow.png";
 
 import page2logo1 from "../../assests/page2/distance.png";
 import page2logo2 from "../../assests/page2/travel.png";
@@ -12,7 +14,6 @@ import location2 from "../../assests/page4/location2.png";
 import location3 from "../../assests/page4/location3.png";
 import location4 from "../../assests/page4/location4.png";
 import clockIcon from "../../assests/page4/clock.png";
-import LocationCard from "../LocationCard/LocationCard";
 
 import amadeus from "../../assests/page5/partner-amadeus.png";
 import booking from "../../assests/page5/partner-booking.com.png";
@@ -20,6 +21,14 @@ import trivago from "../../assests/page5/partner-trivago.png";
 import trainline from "../../assests/page5/partner-trainline.png";
 import cheapflights from "../../assests/page5/partner-cheapflights.png";
 import momondo from "../../assests/page5/partner-momondo.png";
+
+import city1 from "../../assests/page6/city1.png";
+import city2 from "../../assests/page6/city2.png";
+import city3 from "../../assests/page6/city3.png";
+
+import IconCard from "../IconCard";
+import LocationCard from "../LocationCard/LocationCard";
+import CityCard from "../CityCard";
 
 const navItems = [
   {
@@ -99,6 +108,26 @@ const partnerLogos = [
   [{ image: cheapflights, height: "27px", width: "180px" } , { image: momondo, height: "32px", width: "205px" }]
 ]
 
+const cities = [
+  {
+    country: "Japan",
+    place: "Japan",
+    image: city1,
+    subtext: "10 Popular Places"
+  },
+  {
+    country: "Indonesia",
+    place: "Bali",
+    image: city2,
+    subtext: "10 Popular Places"
+  },
+  {
+    country: "Barcelona",
+    place: "Spain",
+    image: city3,
+    subtext: "10 Popular Places"
+  }
+]
 
 const Home = () => {
 
@@ -213,6 +242,30 @@ const Home = () => {
     )
   }
 
+  const page6 = () => {
+    return (
+      <div className="section-6-container">
+        <div style={{display: "flex", justifyContent: "space-between", padding: "2% 8%"}}>
+          <div className="section-text-container">
+            <div className="section-6-subheading">Top Cities</div>
+            <div className="section-6-heading">Our popular cities</div>
+            <div className="section-6-text">We’re a team of humans with the strategy, tools,</div>
+            <div className="section-6-text">and solutions and digital products.</div>
+          </div>
+          <div>
+            <img src={LeftArrow} />
+            <img src={RightArrow} />
+          </div>
+        </div>
+        <div className="cities-container">
+          {cities.map((city) => {
+            return <CityCard image={city.image} country={city.country} place={city.place} subtext={city.subtext}/>
+          })}
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div>
       {page1()}
@@ -220,6 +273,7 @@ const Home = () => {
       {page3()}
       {page4()}
       {page5()}
+      {page6()}
     </div>
   );
 }
