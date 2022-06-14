@@ -207,3 +207,51 @@ $bg-image: url("../../assests/page1/background2.png");
     margin: 0 1.5vw;
   }
 }
+
+//////////////////////////////////////////////
+.section-5-container {
+  height: 80vh;
+}
+
+.section-5-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-5-title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 58px;
+  /* identical to box height, or 129% */
+
+  text-align: center;
+  letter-spacing: -0.01em;
+
+  color: #1e2a39;
+}
+
+.section-5-subtitle {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  /* or 175% */
+
+  text-align: center;
+  letter-spacing: -0.02em;
+
+  color: #5c6272;
+}
+
+.partner-logos-container {
+  display: flex;
+  justify-content: center;
+
+  & > img {
+    margin: 2% 4%;
+  }
+}

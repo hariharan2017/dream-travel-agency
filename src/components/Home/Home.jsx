@@ -14,6 +14,13 @@ import location4 from "../../assests/page4/location4.png";
 import clockIcon from "../../assests/page4/clock.png";
 import LocationCard from "../LocationCard/LocationCard";
 
+import amadeus from "../../assests/page5/partner-amadeus.png";
+import booking from "../../assests/page5/partner-booking.com.png";
+import trivago from "../../assests/page5/partner-trivago.png";
+import trainline from "../../assests/page5/partner-trainline.png";
+import cheapflights from "../../assests/page5/partner-cheapflights.png";
+import momondo from "../../assests/page5/partner-momondo.png";
+
 const navItems = [
   {
     text: "find a trip",
@@ -81,6 +88,17 @@ const locationItems = [
     price: "$544.00"
   }
 ]
+
+// const partnerLogos = [
+//   [amadeus, booking, trivago, trainline],
+//   [cheapflights, momondo]
+// ]
+
+const partnerLogos = [
+  [{ image: amadeus, height: "27px", width: "205px" }, { image: booking, height: "34px", width: "205px" } , { image: trivago, height: "52px", width: "205px" }, { image: trainline, height: "44px", width: "205px" }],
+  [{ image: cheapflights, height: "27px", width: "180px" } , { image: momondo, height: "32px", width: "205px" }]
+]
+
 
 const Home = () => {
 
@@ -167,12 +185,41 @@ const Home = () => {
     )
   }
 
+  const page5 = () => {
+    return (
+      <div className="section-5-container">
+        <div className="section-5-text-container">
+          <div className="section-5-title">Our Tour Partner</div>
+          <div className="section-5-subtitle" style={{marginTop: "3%"}}>There are many variations of passages of Lorem Ipsum available,</div>
+          <div className="section-5-subtitle" style={{marginBottom: "5%"}}>but the majority have suffered alteration.</div>
+        </div>
+        <div>
+          {/* {partnerLogos.map((arrayItem) => {
+            return <div style={{display: "flex"}}>
+              {arrayItem.map((item) => {
+                return <img src={item}/>
+              })}
+            </div>
+          })} */}
+          {partnerLogos.map((arrayItem) => {
+            return <div className="partner-logos-container">
+              {arrayItem.map((item) => {
+                return <img src={item.image} height={item.height} width={item.width}/>
+              })}
+            </div>
+          })}
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div>
       {page1()}
       {page2()}
       {page3()}
       {page4()}
+      {page5()}
     </div>
   );
 }
