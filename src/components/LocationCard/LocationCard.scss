@@ -1,0 +1,45 @@
+.location-card-container {
+  background-color: white;
+  padding: 20px;
+}
+
+.location-card-title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  /* identical to box height, or 100% */
+
+  letter-spacing: -0.02em;
+
+  color: #1e2a39;
+  margin: 10% 0;
+}
+
+.location-card-duration {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  /* identical to box height, or 100% */
+
+  letter-spacing: -0.01em;
+
+  color: #7c8291;
+}
+
+.location-card-pricing {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  /* identical to box height, or 100% */
+
+  text-align: right;
+  letter-spacing: -0.01em;
+
+  color: #ee6d52;
+}

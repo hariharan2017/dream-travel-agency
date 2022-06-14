@@ -2,10 +2,17 @@ import "./Home.scss";
 import IconCard from "../IconCard";
 
 import Logo from "../../assests/page1/Logo.png";
+
 import page2logo1 from "../../assests/page2/distance.png";
 import page2logo2 from "../../assests/page2/travel.png";
 import page2logo3 from "../../assests/page2/walk.png";
 
+import location1 from "../../assests/page4/location1.png";
+import location2 from "../../assests/page4/location2.png";
+import location3 from "../../assests/page4/location3.png";
+import location4 from "../../assests/page4/location4.png";
+import clockIcon from "../../assests/page4/clock.png";
+import LocationCard from "../LocationCard/LocationCard";
 
 const navItems = [
   {
@@ -41,6 +48,37 @@ const page2IconItems = [
     icon: page2logo3,
     title: "Take your Flight",
     desc: "Take your flight on selected date and enjoy"
+  }
+]
+
+const locationItems = [
+  {
+    image: location1,
+    title: "Spain Places",
+    icon: clockIcon,
+    duration: "7 Days/6 Nights",
+    price: "$544.00"
+  },
+  {
+    image: location2,
+    title: "Japa Places",
+    icon: clockIcon,
+    duration: "7 Days/6 Nights",
+    price: "$544.00"
+  },
+  {
+    image: location3,
+    title: "London Places",
+    icon: clockIcon,
+    duration: "7 Days/6 Nights",
+    price: "$544.00"
+  },
+  {
+    image: location4,
+    title: "Canada Places",
+    icon: clockIcon,
+    duration: "7 Days/6 Nights",
+    price: "$544.00"
   }
 ]
 
@@ -85,10 +123,56 @@ const Home = () => {
     )
   }
 
+  const page3 = () => {
+    return (
+      <div className="section-3-container">
+        <div className="section-3-main-text-container">
+          <div style={{minWidth: "30vw"}}>
+            <div className="section-3-sub-header">About Us</div>
+            <div className="section-3-main-header">Explore all corners of</div> 
+            <div className="section-3-main-header">the world with us.</div>
+          </div>
+          <div className="section-3-main-desc">
+            These exercises ran in parallel with a series of focus groups comprising of parents. These exercises ran in parallel with a series of focus groups comprising of parents.
+          </div>
+        </div>
+        <div>
+          TODO: Carousel Image Display
+        </div>
+      </div>
+    )
+  }
+
+  const page4 = () => {
+    return (
+      <div className="section-4-container">
+        <div>
+          <div className="section-4-header">Featured Tour Places</div>
+          <div className="section-4-subtitle" style={{marginTop: "1%"}}>There are many variations of passages of Lorem Ipsum available,</div>
+          <div className="section-4-subtitle" style={{marginBottom: "3%"}}>but the majority have suffered alteration.</div>  
+        </div>
+        <div className="location-cards-container">
+          {locationItems.map((locationItem) => {
+            return (
+            <LocationCard 
+              title={locationItem.title}
+              image={locationItem.image}
+              icon={locationItem.icon}
+              duration={locationItem.duration}
+              price={locationItem.price}/>
+            )
+          })}
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div>
       {page1()}
       {page2()}
+      {page3()}
+      {page4()}
     </div>
   );
 }
