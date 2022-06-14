@@ -9,6 +9,9 @@ import page2logo1 from "../../assests/page2/distance.png";
 import page2logo2 from "../../assests/page2/travel.png";
 import page2logo3 from "../../assests/page2/walk.png";
 
+import image1 from "../../assests/page3/image1.png";
+import image2 from "../../assests/page3/image2.png";
+
 import location1 from "../../assests/page4/location1.png";
 import location2 from "../../assests/page4/location2.png";
 import location3 from "../../assests/page4/location3.png";
@@ -26,6 +29,8 @@ import city1 from "../../assests/page6/city1.png";
 import city2 from "../../assests/page6/city2.png";
 import city3 from "../../assests/page6/city3.png";
 
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 import IconCard from "../IconCard";
 import LocationCard from "../LocationCard/LocationCard";
 import CityCard from "../CityCard";
@@ -183,8 +188,17 @@ const Home = () => {
             These exercises ran in parallel with a series of focus groups comprising of parents. These exercises ran in parallel with a series of focus groups comprising of parents.
           </div>
         </div>
-        <div>
-          TODO: Carousel Image Display
+        <div style={{width: "50vw", margin: "0 25% 10%", display: "flex", justifyContent: "center"}}>
+        <Carousel showThumbs={false} autoPlay={true}>
+          <div>
+            <img src={image1} />
+            <p className="legend">Legend 1</p>
+          </div>
+          <div>
+            <img src={image2} />
+            <p className="legend">Legend 2</p>
+          </div>
+        </Carousel>
         </div>
       </div>
     )
